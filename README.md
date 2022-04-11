@@ -1,5 +1,6 @@
 # BuildPhish
 Simple bash script which installs and sets up Gophish as a service. Current version has been tested on Debian and Ubuntu.
+If Gophish has been configured successfully as a service, it will also start on boot
 
 ## Install & Run
 First download the repo with git, navigate into directory and make bash file executable:
