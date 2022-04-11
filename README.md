@@ -2,13 +2,11 @@
 Simple bash script which installs and sets up Gophish as a service. Current version has been tested on Debian and Ubuntu.
 
 ## Install & Run
-First download the bash script with either curl or wget, thereafter make it executable:
+First download the repo with git, navigate into directory and make bash file executable:
 ```bash
-# Curl
-$ curl https://raw.githubusercontent.com/bl13pbl03p/buildphish/main/buildphish.sh --output buildphish.sh && chmod 700 buildphish.sh
-
-# Wget
-$ wget https://raw.githubusercontent.com/bl13pbl03p/buildphish/main/buildphish.sh && chmod 700 buildphish.sh
+$ git clone https://github.com/bl13pbl03p/buildphish.git
+$ cd buildphish
+$ chmod +x buildphish.sh
 ```
 Now you can run the script as root:
 ```bash
