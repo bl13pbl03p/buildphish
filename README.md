@@ -36,7 +36,7 @@ cat /var/log/gophish/gophish.log | grep 'Please login with the username admin an
 ## Uninstall
 You can run the cleanphish script as root to clean Gophish as service:
 ```bash
-
+$ sudo ./cleanphish.sh
    ________                 ____  __    _      __  
   / ____/ /__  ____ _____  / __ \/ /_  (_)____/ /_ 
  / /   / / _ \/ __ `/ __ \/ /_/ / __ \/ / ___/ __ \
@@ -58,7 +58,7 @@ Made by bl13pbl03p                            v.0.1
 - [x]  Add uninstall script
 - [x]  Add ASCII banner
 - [ ]  Add loading bar when downloading and unzipping gophish
-- [ ]  Add preview to README
+- [x]  Add preview to README
 - [ ]  More functions and fun stuff
 
 ## Resources
