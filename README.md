@@ -17,7 +17,7 @@ $ sudo ./buildphish.sh
 ## To do
 - [x]  Build initial script
 - [x]  Check if Gophish already exists as service
-- [ ]  Add uninstall script
+- [x]  Add uninstall script
 - [x]  Add ASCII banner
 - [ ]  Add preview to README
 - [ ]  More functions and fun stuff
