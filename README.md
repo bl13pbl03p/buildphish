@@ -62,3 +62,4 @@ Made by bl13pbl03p                            v.0.1
 - [Latest Gophish Release](https://github.com/gophish/gophish/releases/tag/v0.11.0)
 - [Install Gophish on Ubuntu 18.04/Debian 9.8](https://kifarunix.com/install-gophish-on-ubuntu-18-04-debian-9-8/)
 - [Official Gophish Docs](https://getgophish.com/documentation/)
+- [Creating banner](https://manytools.org/hacker-tools/ascii-banner/)
