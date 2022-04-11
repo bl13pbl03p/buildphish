@@ -16,9 +16,11 @@ sudo setcap cap_net_bind_service=+ep /opt/gophish/gophish
 sudo systemctl daemon-reload
 sudo systemctl start gophish
 sudo systemctl enable gophish
+
 echo "[+] Gophish is setup as service"
 echo "[?] Check if service is running: sudo systemctl status gophish"
 echo "[?] If service does not run, troubleshoot the /etc/systemd/system/gophish.service file"
 echo "[*] Visit https://localhost:3333 to login"
-echo "[*] Username is admin, password is show below"
+echo "[*] Username is admin, password is shown below"
+
 cat /var/log/gophish/gophish.log | grep 'Please login with the username admin and the password' | awk '{print $12}'
