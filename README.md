@@ -3,7 +3,7 @@ Simple bash script which installs and sets up Gophish as a service. Current vers
 If Gophish has been configured successfully as a service, it will also start on boot
 
 ## Install & Run
-First download the repo with git, navigate into directory and make bash files executable:
+First download the repo with git, navigate into directory and make the bash files executable:
 ```bash
 $ git clone https://github.com/bl13pbl03p/buildphish.git
 $ cd buildphish
