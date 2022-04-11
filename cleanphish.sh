@@ -15,6 +15,6 @@ echo "[-] Removing Gophish"
 sudo rm -rf /opt/gophish
 echo "[-] Removing logs"
 sudo rm -rf /var/log/gophish
-echo "[-] Remove Gophish user"
-sudo deluser gophish
+echo "[-] Removing Gophish user"
+sudo deluser gophish > /dev/null 2>&1
 echo "[+] Bye bye Gophish"
