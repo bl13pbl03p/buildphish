@@ -1,7 +1,7 @@
 #!/bin/bash
 
 FILE=/etc/systemd/system/gophish.service
-if [ -f "$FILE" ]; 
+if [ -f "$FILE" > /dev/null 2>&1]; 
 then
 echo' 
     ____        _ __    ______  __    _      __  
@@ -9,7 +9,9 @@ echo'
   / __  / / / / / / __  / /_/ / __ \/ / ___/ __ \
  / /_/ / /_/ / / / /_/ / ____/ / / / (__  ) / / /
 /_____/\__,_/_/_/\__,_/_/   /_/ /_/_/____/_/ /_/
-Made by bl13pbl03p                          v.0.1'
+Made by bl13pbl03p                          v.0.1
+
+'
 
 echo "[-] Gophish is already configured as a service"
 echo "[-] Terminating BuildPhish"
@@ -20,7 +22,9 @@ echo'
   / __  / / / / / / __  / /_/ / __ \/ / ___/ __ \
  / /_/ / /_/ / / / /_/ / ____/ / / / (__  ) / / /
 /_____/\__,_/_/_/\__,_/_/   /_/ /_/_/____/_/ /_/
-Made by bl13pbl03p                          v.0.1'
+Made by bl13pbl03p                          v.0.1
+
+'
 
 # Installing Gophish
 echo "[+] Let's build!"                                                 
