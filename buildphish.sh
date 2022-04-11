@@ -1,7 +1,9 @@
-# Installment
+#!/bin/bash
+
 FILE=/etc/systemd/system/gophish.service
 if [ -f "$FILE" ]; then
-	echo' ____        _ __    ______  __    _      __  
+	echo' 
+              ____        _ __    ______  __    _      __  
 	     / __ )__  __(_) /___/ / __ \/ /_  (_)____/ /_ 
 	    / __  / / / / / / __  / /_/ / __ \/ / ___/ __ \
 	   / /_/ / /_/ / / / /_/ / ____/ / / / (__  ) / / /
@@ -11,13 +13,15 @@ if [ -f "$FILE" ]; then
     echo "[-] Gophish is already configured as a service"
     echo "[-] Terminating BuildPhish"
 else 
-	echo' ____        _ __    ______  __    _      __  
+	echo' 
+	      ____        _ __    ______  __    _      __  
 	     / __ )__  __(_) /___/ / __ \/ /_  (_)____/ /_ 
 	    / __  / / / / / / __  / /_/ / __ \/ / ___/ __ \
 	   / /_/ / /_/ / / / /_/ / ____/ / / / (__  ) / / /
 	  /_____/\__,_/_/_/\__,_/_/   /_/ /_/_/____/_/ /_/
 	  Made by bl13pbl03p                          v.0.1'
-
+        
+	# Installing Gophish
 	echo "[+] Let's build!"                                                 
 	sudo service apache2 stop
 	echo "[+] Stoppped apache2"
@@ -41,7 +45,5 @@ else
 	echo "[?] Check if service is running: sudo systemctl status gophish"
 	echo "[?] If service does not run, troubleshoot the /etc/systemd/system/gophish.service file"
 	echo "[*] Visit https://localhost:3333 to login"
-	echo "[*] Username is admin, password is shown below"
-
-	cat /var/log/gophish/gophish.log | grep 'Please login with the username admin and the password' | awk '{print $12}'
+	echo "[*] Username is admin, for password run: cat /var/log/gophish/gophish.log | grep 'Please login with the username admin and the password' | awk '{print $12}"
 fi
