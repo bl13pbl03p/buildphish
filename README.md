@@ -17,6 +17,7 @@ $ sudo ./buildphish.sh
 
 ## To do
 - [x]  Build initial script
+- [ ]  Check if Gophish already exists as service
 - [ ]  Add ASCII banner
 - [ ]  Add preview to README
 - [ ]  Succesfully configure gophish.service file on initial run while adding '>>'
