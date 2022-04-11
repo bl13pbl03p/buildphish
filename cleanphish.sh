@@ -6,13 +6,15 @@ echo '
 / /___/ /  __/ /_/ / / / / ____/ / / / (__  ) / / /
 \____/_/\___/\__,_/_/ /_/_/   /_/ /_/_/____/_/ /_/                     
 Made by bl13pbl03p                            v.0.1'
+echo "[-] Removing service"
+sudo systemctl stop gophish
+sudo systemctl disable gophish
+sudo rm /etc/systemd/system/gophish.service
+sudo systemctl daemon-reload
 echo "[-] Removing Gophish"
 sudo rm -rf /opt/gophish
 echo "[-] Removing logs"
 sudo rm -rf /var/log/gophish
-echo "[-] Removing service"
-sudo rm /etc/systemd/system/gophish.service
-sudo systemctl daemon-reload
 echo "[-] Remove Gophish user"
 sudo deluser gophish
 echo "[+] Bye bye Gophish"
