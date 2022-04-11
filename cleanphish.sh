@@ -12,7 +12,7 @@ Made by bl13pbl03p                            v.0.1
 echo "[-] Removing service"
 sudo systemctl stop gophish
 sudo systemctl disable gophish
-sudo rm /etc/systemd/system/gophish.service
+sudo rm /etc/systemd/system/gophish.service > /dev/null 2>&1
 sudo systemctl daemon-reload
 echo "[-] Removing Gophish"
 sudo rm -rf /opt/gophish
