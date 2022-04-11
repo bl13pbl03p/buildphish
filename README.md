@@ -56,6 +56,7 @@ Made by bl13pbl03p                            v.0.1
 - [x]  Add uninstall script
 - [x]  Add ASCII banner
 - [ ]  Function which adds phishing redirect page
+- [ ]  Hash check of zip file
 - [ ]  Add loading bar when downloading and unzipping gophish
 - [x]  Add preview to README
 - [ ]  More functions and fun stuff
