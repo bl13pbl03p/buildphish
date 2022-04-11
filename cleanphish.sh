@@ -5,7 +5,9 @@ echo '
  / /   / / _ \/ __ `/ __ \/ /_/ / __ \/ / ___/ __ \
 / /___/ /  __/ /_/ / / / / ____/ / / / (__  ) / / /
 \____/_/\___/\__,_/_/ /_/_/   /_/ /_/_/____/_/ /_/                     
-Made by bl13pbl03p                            v.0.1'
+Made by bl13pbl03p                            v.0.1
+
+'
 
 echo "[-] Removing service"
 sudo systemctl stop gophish
