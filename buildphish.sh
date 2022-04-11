@@ -1,7 +1,7 @@
 #!/bin/bash
 
 FILE=/etc/systemd/system/gophish.service
-if [ -f "$FILE"]; 
+if [ -f "$FILE" ]; 
 then
 echo ' 
     ____        _ __    ______  __    _      __  
@@ -10,7 +10,6 @@ echo '
  / /_/ / /_/ / / / /_/ / ____/ / / / (__  ) / / /
 /_____/\__,_/_/_/\__,_/_/   /_/ /_/_/____/_/ /_/
 Made by bl13pbl03p                          v.0.1
-
 '
 
 echo "[-] Gophish is already configured as a service"
@@ -23,14 +22,13 @@ echo '
  / /_/ / /_/ / / / /_/ / ____/ / / / (__  ) / / /
 /_____/\__,_/_/_/\__,_/_/   /_/ /_/_/____/_/ /_/
 Made by bl13pbl03p                          v.0.1
-
 '
 
 # Installing Gophish
 echo "[+] Let's build!"                                                 
 sudo service apache2 stop
 echo "[+] Stoppped apache2"
-echo "[+] Downloading Gophish"
+echo "[+] Downloading Gophish v0.11"
 wget https://github.com/gophish/gophish/releases/download/v0.11.0/gophish-v0.11.0-linux-64bit.zip > /dev/null 2>&1
 echo "[+] Unzipping.."
 sudo unzip gophish-v0.11.0-linux-64bit.zip -d /opt/gophish > /dev/null 2>&1
