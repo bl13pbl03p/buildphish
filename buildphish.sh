@@ -20,5 +20,5 @@ echo "[+] Gophish is setup as service"
 echo "[?] Check if service is running: sudo systemctl status gophish"
 echo "[?] If service does not run, troubleshoot the /etc/systemd/system/gophish.service file"
 echo "[*] Visit https://localhost:3333 to login"
-PASSWORD=cat /var/log/gophish/gophish.log | grep 'Please login with the username admin and the password' | awk '{print $12}'
-echo "[*] Username is admin, password is $PASSWORD"
+echo "[*] Username is admin, password is show below"
+cat /var/log/gophish/gophish.log | grep 'Please login with the username admin and the password' | awk '{print $12}'
