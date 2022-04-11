@@ -9,7 +9,7 @@ $ git clone https://github.com/bl13pbl03p/buildphish.git
 $ cd buildphish
 $ chmod +x *.sh
 ```
-Now you can run the script as root to build Gophish as service:
+Now you can run the script to build Gophish as service:
 ```bash
 $ sudo ./buildphish.sh
  
@@ -34,7 +34,7 @@ cat /var/log/gophish/gophish.log | grep 'Please login with the username admin an
 [*] Visit https://localhost:3333 to login
 ```
 ## Uninstall
-You can run the cleanphish script as root to clean Gophish as service:
+You can run the cleanphish script to clean Gophish as service:
 ```bash
 $ sudo ./cleanphish.sh
    ________                 ____  __    _      __  
@@ -50,8 +50,6 @@ Made by bl13pbl03p                            v.0.1
 [-] Removing Gophish user
 [+] Bye bye Gophish
 ```
-
-
 ## To do
 - [x]  Build initial script
 - [x]  Check if Gophish already exists as service
@@ -60,7 +58,6 @@ Made by bl13pbl03p                            v.0.1
 - [ ]  Add loading bar when downloading and unzipping gophish
 - [x]  Add preview to README
 - [ ]  More functions and fun stuff
-
 ## Resources
 - [Latest Gophish Release](https://github.com/gophish/gophish/releases/tag/v0.11.0)
 - [Install Gophish on Ubuntu 18.04/Debian 9.8](https://kifarunix.com/install-gophish-on-ubuntu-18-04-debian-9-8/)
