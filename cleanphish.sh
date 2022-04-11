@@ -12,6 +12,7 @@ echo "[-] Removing logs"
 sudo rm -rf /var/log/gophish
 echo "[-] Removing service"
 sudo rm /etc/systemd/system/gophish.service
+sudo systemctl daemon-reload
 echo "[-] Remove Gophish user"
 sudo deluser gophish
 echo "[+] Bye bye Gophish"
