@@ -3,15 +3,17 @@ Simple bash script which downloads, installs and sets up Gophish as a service. C
 If Gophish has been configured successfully as a service, it will also start on boot
 
 ## Install & Run
-First download the repo with git, navigate into directory and make the bash files executable:
+First download the repo with git, navigate into directory and make the bash files executable.
+
+Open your terminal and enter the following commands:
 ```bash
-$ git clone https://github.com/bl13pbl03p/buildphish.git
-$ cd buildphish
-$ chmod +x *.sh
+git clone https://github.com/bl13pbl03p/buildphish.git
+cd buildphish
+chmod +x *.sh
 ```
 Now you can run the script to build Gophish as service:
 ```bash
-$ sudo ./buildphish.sh
+sudo ./buildphish.sh
  
     ____        _ __    ______  __    _      __  
    / __ )__  __(_) /___/ / __ \/ /_  (_)____/ /_ 
@@ -36,7 +38,7 @@ cat /var/log/gophish/gophish.log | grep 'Please login with the username admin an
 ## Uninstall
 You can run the cleanphish script to clean Gophish as service:
 ```bash
-$ sudo ./cleanphish.sh
+sudo ./cleanphish.sh
    ________                 ____  __    _      __  
   / ____/ /__  ____ _____  / __ \/ /_  (_)____/ /_ 
  / /   / / _ \/ __ `/ __ \/ /_/ / __ \/ / ___/ __ \
