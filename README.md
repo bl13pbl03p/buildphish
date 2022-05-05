@@ -1,5 +1,5 @@
 # BuildPhish
-Simple bash script which downloads, installs and sets up Gophish as a service. Current version has been tested on Debian and Ubuntu.
+Simple bash script which downloads, installs and sets up GaaS: Gophish as a Service. Current version has been tested on Debian and Ubuntu.
 If Gophish has been configured successfully as a service, it will also start on boot
 
 ## Install & Run
@@ -11,7 +11,7 @@ git clone https://github.com/bl13pbl03p/buildphish.git
 cd buildphish
 chmod +x *.sh
 ```
-Now you can run the script to build Gophish as service:
+Now you can run the script to build Gophish as a Service:
 ```bash
 sudo ./buildphish.sh
  
