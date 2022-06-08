@@ -27,7 +27,6 @@ Made by bl13pbl03p                          v.0.1
 [+] Downloading Gophish
 [+] Unzipping..
 [+] Installed gophish
-Failed to enable unit: File /etc/systemd/system/gophish.service already exists.
 [+] Gophish is setup as service
 [?] Check if service is running: sudo systemctl status gophish
 [?] If service does not run, troubleshoot the /etc/systemd/system/gophish.service file
