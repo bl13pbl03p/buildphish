@@ -62,6 +62,12 @@ Made by bl13pbl03p                            v.0.1
 - [ ]  Add loading bar when downloading and unzipping gophish
 - [x]  Add preview to README
 - [ ]  More functions and fun stuff
+## Errors
+The following error might occur while installing:
+```bash
+Failed to enable unit: File /etc/systemd/system/gophish.service already exists.
+```
+The error can be ignored, for more info see: https://unix.stackexchange.com/questions/351692/how-can-we-mask-service-whose-unit-file-is-located-under-etc-systemd-system
 ## Resources
 - [Latest Gophish Release](https://github.com/gophish/gophish/releases/tag/v0.11.0)
 - [Install Gophish on Ubuntu 18.04/Debian 9.8](https://kifarunix.com/install-gophish-on-ubuntu-18-04-debian-9-8/)
