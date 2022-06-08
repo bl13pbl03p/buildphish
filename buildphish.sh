@@ -1,6 +1,8 @@
 #!/bin/bash
 
 FILE=/etc/systemd/system/gophish.service
+SUM="f33ac7695850132c04d190f83ef54732421a8d4578be1475d3a819fe6173c462"
+
 if [ -f "$FILE" ]; 
 then
 echo ' 
@@ -30,6 +32,7 @@ sudo service apache2 stop
 echo "[+] Stoppped apache2"
 echo "[+] Downloading Gophish v0.11"
 wget https://github.com/gophish/gophish/releases/download/v0.11.0/gophish-v0.11.0-linux-64bit.zip > /dev/null 2>&1
+# Checking hash from retrieve zip file: sha256sum gophish-v0.11.0-linux-64bit.zip
 echo "[+] Unzipping.."
 sudo unzip gophish-v0.11.0-linux-64bit.zip -d /opt/gophish > /dev/null 2>&1
 sudo chmod +x /opt/gophish/gophish
