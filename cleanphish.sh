@@ -20,4 +20,6 @@ echo "[-] Removing logs"
 sudo rm -rf /var/log/gophish
 echo "[-] Removing Gophish user"
 sudo deluser gophish > /dev/null 2>&1
+echo "[+] Configuring apache2 to start on boot"
+# commands
 echo "[+] Bye bye Gophish"
