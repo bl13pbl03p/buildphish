@@ -29,7 +29,9 @@ Made by bl13pbl03p                          v.0.1
 # Installing Gophish
 echo "[+] Let's build!"                                                 
 sudo service apache2 stop
-echo "[+] Stoppped apache2"
+sudo systemctl disable apache2
+sudo systemctl mask apache2
+echo "[+] Prevented apache2 from starting on boot"
 echo "[+] Downloading Gophish v0.11"
 wget https://github.com/gophish/gophish/releases/download/v0.11.0/gophish-v0.11.0-linux-64bit.zip > /dev/null 2>&1
 # Checking hash from retrieve zip file: sha256sum gophish-v0.11.0-linux-64bit.zip
