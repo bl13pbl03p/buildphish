@@ -14,6 +14,9 @@ sudo systemctl stop gophish
 sudo systemctl disable gophish
 sudo rm /etc/systemd/system/gophish.service > /dev/null 2>&1
 sudo systemctl daemon-reload
+echo "[-] Enabling apache2 server"
+sudo systemctl unmask apache2 > /dev/null 2>&1
+sudo service apache2 restart > /dev/null 2>&1
 echo "[-] Removing Gophish"
 sudo rm -rf /opt/gophish
 echo "[-] Removing logs"
