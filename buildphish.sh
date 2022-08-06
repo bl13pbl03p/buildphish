@@ -27,7 +27,8 @@ Made by bl13pbl03p                          v.0.1
 '
 
 # Installing Gophish
-echo "[+] Let's build!"                                                 
+echo "[+] Let's build!"
+sudo apt update && sudo apt install unzip -y > /dev/null 2>&1
 sudo service apache2 stop
 sudo systemctl disable apache2
 sudo systemctl mask apache2
