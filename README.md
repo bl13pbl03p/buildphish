@@ -69,7 +69,7 @@ Failed to enable unit: File /etc/systemd/system/gophish.service already exists.
 ```
 The error can be ignored, for more info see: https://unix.stackexchange.com/questions/351692/how-can-we-mask-service-whose-unit-file-is-located-under-etc-systemd-system
 ## Resources
-- [Latest Gophish Release](https://github.com/gophish/gophish/releases/tag/v0.12.1))
+- [Latest Gophish Release](https://github.com/gophish/gophish/releases/tag/v0.12.1)
 - [Install Gophish on Ubuntu 18.04/Debian 9.8](https://kifarunix.com/install-gophish-on-ubuntu-18-04-debian-9-8/)
 - [Official Gophish Docs](https://getgophish.com/documentation/)
 - [Creating banner](https://manytools.org/hacker-tools/ascii-banner/)
