@@ -1,7 +1,7 @@
 #!/bin/bash
 
 FILE=/etc/systemd/system/gophish.service
-SUM="f33ac7695850132c04d190f83ef54732421a8d4578be1475d3a819fe6173c462"
+SUM="44f598c1eeb72c3b08fa73d57049022d96cea2872283b87a73d21af78a2c6d47"
 
 if [ -f "$FILE" ]; 
 then
@@ -33,13 +33,13 @@ sudo service apache2 stop
 sudo systemctl disable apache2
 sudo systemctl mask apache2
 echo "[+] Prevented apache2 from starting on boot"
-echo "[+] Downloading Gophish v0.11"
-wget https://github.com/gophish/gophish/releases/download/v0.11.0/gophish-v0.11.0-linux-64bit.zip > /dev/null 2>&1
-# Checking hash from retrieve zip file: sha256sum gophish-v0.11.0-linux-64bit.zip
+echo "[+] Downloading Gophish v0.12.1"
+wget https://github.com/gophish/gophish/releases/download/v0.12.1/gophish-v0.12.1-linux-64bit.zip > /dev/null 2>&1
+# Checking hash from retrieved zip file: gophish-v0.12.1-linux-64bit.zip
 echo "[+] Unzipping.."
 sudo apt-get update -y > /dev/null 2>&1
 sudo apt-get install unzip -y > /dev/null 2>&1
-sudo unzip gophish-v0.11.0-linux-64bit.zip -d /opt/gophish > /dev/null 2>&1
+sudo unzip gophish-v0.12.1-linux-64bit.zip -d /opt/gophish > /dev/null 2>&1
 sudo chmod +x /opt/gophish/gophish
 echo "[+] Installed gophish"
 
