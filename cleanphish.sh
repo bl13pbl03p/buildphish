@@ -1,4 +1,5 @@
 #!/bin/bash
+echo -e "\033[35m"
 echo '
    ________                 ____  __    _      __  
   / ____/ /__  ____ _____  / __ \/ /_  (_)____/ /_ 
@@ -8,7 +9,7 @@ echo '
 Made by bl13pbl03p                            v.0.1
 
 '
-
+echo -e "\033[0m"
 echo "[-] Removing service"
 sudo systemctl stop gophish
 sudo systemctl disable gophish
