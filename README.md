@@ -56,10 +56,10 @@ Made by bl13pbl03p                            v.0.1
 - [x]  Add uninstall script
 - [x]  Add ASCII banner
 - [ ]  Function which adds phishing redirect page
-- [ ]  Add nice colors [Possible helpful docs](https://dev.to/ifenna__/adding-colors-to-bash-scripts-48g4#:~:text=The%20escape%20sequence%20for%20specifying,option%20to%20enable%20their%20interpretation.&text=The%20%5Ce%5B0m%20means%20we,text%20color%20back%20to%20normal.)
-- [ ]  Hash check of zip file
+- [x]  Add nice colors [Possible helpful docs](https://dev.to/ifenna__/adding-colors-to-bash-scripts-48g4#:~:text=The%20escape%20sequence%20for%20specifying,option%20to%20enable%20their%20interpretation.&text=The%20%5Ce%5B0m%20means%20we,text%20color%20back%20to%20normal.)
+- [x]  Hash check of zip file
 - [ ]  Make cross-platform
-- [ ]  Add loading bar when downloading and unzipping gophish
+- [x]  Add loading bar when downloading and unzipping gophish
 - [x]  Add preview to README
 - [ ]  More functions and fun stuff
 ## Errors
