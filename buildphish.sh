@@ -3,6 +3,7 @@
 FILE=/etc/systemd/system/gophish.service
 # Set the expected checksum of the ZIP file
 expected_checksum="44f598c1eeb72c3b08fa73d57049022d96cea2872283b87a73d21af78a2c6d47"
+password="$(grep --color=always --word-regexp "Please login with the username admin and the password" /var/log/gophish/gophish.log | cut -d' ' -f12- | tr -d '"')"
 
 if [ -f "$FILE" ]; 
 then
@@ -76,6 +77,6 @@ echo -e "\033[32m[+] Gophish is setup as service\033[0m"
 echo -e "\033[33m[?] Check if service is running: sudo systemctl status gophish\033[0m"
 echo -e "\033[33m[?] If service does not run, troubleshoot the /etc/systemd/system/gophish.service file\033[0m"
 echo "[*] Username is admin, password is shown below"
-grep --color=always --word-regexp "Please login with the username admin and the password" /var/log/gophish/gophish.log | cut -d' ' -f12- | tr -d '"'
+cat "$password"
 echo "[*] Visit https://localhost:3333 to login"
 fi
