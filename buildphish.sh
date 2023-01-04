@@ -32,7 +32,8 @@ echo -e "\033[0m"
 
 # Installing Gophish
 echo -e "\033[32m[+] Let's build!\033[0m"
-sudo apt update && sudo apt install wget unzip -y > /dev/null 2>&1
+sudo apt update -y > /dev/null 2>&1
+sudo apt install pv wget unzip -y > /dev/null 2>&1
 sudo service apache2 stop && sudo systemctl disable apache2 && sudo systemctl mask apache2 > /dev/null 2>&1 
 echo -e "\033[32mPrevented apache2 from starting on boot\033[0m"
 echo -e "\033[32m[+] Downloading Gophish v0.12.1\033[0m"
@@ -51,7 +52,7 @@ else
 fi
 
 # Start the progress bar
-echo "[+] Unzipping.."
+echo -e "\033[32m[+] Unzipping..\033[0m"
 
 # Unzip the file and show the progress bar using pv
 sudo unzip -q gophish-v0.12.1-linux-64bit.zip -d /opt/gophish | pv -n -s $(unzip -Z gophish-v0.12.1-linux-64bit.zip | wc -l) > /dev/null
@@ -72,7 +73,7 @@ sudo systemctl start gophish
 sudo systemctl enable gophish
 echo -e "\033[32m[+] Gophish is setup as service\033[0m"
 echo -e "\033[33m[?] Check if service is running: sudo systemctl status gophish\033[0m"
-echo -e "\033[33m[?] If service does not run, troubleshoot the /etc/systemd/system/gophish.service file\033[0m""
+echo -e "\033[33m[?] If service does not run, troubleshoot the /etc/systemd/system/gophish.service file\033[0m"
 echo "[*] Username is admin, password is shown below"
 grep 'Please login with the username admin and the password ' /var/log/gophish/gophish.log | cut -d' ' -f2- > /dev/null 2>&1
 echo "[*] Visit https://localhost:3333 to login"
