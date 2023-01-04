@@ -76,6 +76,6 @@ sudo systemctl enable gophish
 echo -e "\033[32m[+] Gophish is setup as service\033[0m"
 echo -e "\033[33m[?] Check if service is running: sudo systemctl status gophish\033[0m"
 echo -e "\033[33m[?] If service does not run, troubleshoot the /etc/systemd/system/gophish.service file\033[0m"
-echo "[*] Username is admin, password is " password
+echo "[*] Username is admin, password is" $password
 echo "[*] Visit https://localhost:3333 to login"
 fi
