@@ -32,6 +32,7 @@ echo -e "\033[0m"
 
 # Installing Gophish
 echo -e "\033[32m[+] Let's build!\033[0m"
+echo -e "\033[32m[+] Updating apt and installing packages\033[0m"
 sudo apt update -y > /dev/null 2>&1
 sudo apt install pv wget unzip -y > /dev/null 2>&1
 sudo service apache2 stop && sudo systemctl disable apache2 && sudo systemctl mask apache2 > /dev/null 2>&1 
