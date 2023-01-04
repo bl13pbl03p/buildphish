@@ -56,7 +56,7 @@ fi
 echo -e "\033[32m[+] Unzipping..\033[0m"
 
 # Unzip the file and show the progress bar using pv
-sudo unzip -q gophish-v0.12.1-linux-64bit.zip -d /opt/gophish | pv -n -s $(unzip -Z gophish-v0.12.1-linux-64bit.zip) > /dev/null
+sudo pv -tpre unzip gophish-v0.12.1-linux-64bit.zip -d /opt/gophish
 
 echo "Unzip complete!"
 sudo chmod +x /opt/gophish/gophish
@@ -65,7 +65,6 @@ echo -e "\033[32m[+] Installed gophish\033[0m"
 # Setting up as service
 echo -e "\033[32m[+] Setting up Gophish as a service\033[0m"
 sudo useradd -r gophish
-sudo \cp -r gophish.service /etc/systemd/system/
 sudo mkdir /var/log/gophish
 sudo chown -R gophish:gophish /opt/gophish/ /var/log/gophish/
 sudo setcap cap_net_bind_service=+ep /opt/gophish/gophish
