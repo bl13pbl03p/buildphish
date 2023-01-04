@@ -55,7 +55,7 @@ Made by bl13pbl03p                            v.0.1
 - [x]  Check if Gophish already exists as service
 - [x]  Add uninstall script
 - [x]  Add ASCII banner
-- [ ]  Function which adds phishing redirect page
+- [ ]  Check if Apache2 service exists
 - [x]  Add nice colors [Possible helpful docs](https://dev.to/ifenna__/adding-colors-to-bash-scripts-48g4#:~:text=The%20escape%20sequence%20for%20specifying,option%20to%20enable%20their%20interpretation.&text=The%20%5Ce%5B0m%20means%20we,text%20color%20back%20to%20normal.)
 - [x]  Hash check of zip file
 - [ ]  Make cross-platform
