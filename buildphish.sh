@@ -56,7 +56,7 @@ fi
 echo -e "\033[32m[+] Unzipping..\033[0m"
 
 # Unzip the file and show the progress bar using pv
-sudo pv -tpre unzip gophish-v0.12.1-linux-64bit.zip -d /opt/gophish
+sudo pv unzip gophish-v0.12.1-linux-64bit.zip -d /opt/gophish
 
 echo "Unzip complete!"
 sudo chmod +x /opt/gophish/gophish
