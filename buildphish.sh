@@ -58,7 +58,7 @@ echo -e "\033[32m[+] Unzipping..\033[0m"
 # Unzip the file and show the progress bar using pv
 sudo unzip -o gophish-v0.12.1-linux-64bit.zip -d /opt/gophish | pv -l >/dev/null
 
-echo "Unzip complete!"
+echo -e "\033[32m[+] Unzip complete!\033[0m"
 sudo chmod +x /opt/gophish/gophish
 echo -e "\033[32m[+] Installed gophish\033[0m"
 
