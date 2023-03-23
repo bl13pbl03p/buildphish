@@ -63,6 +63,8 @@ Made by bl13pbl03p                            v.0.1
 - [x]  Add loading bar when downloading and unzipping gophish
 - [x]  Add preview to README
 - [ ]  More functions and fun stuff
+- [ ]  Upgrade to Evilgophish
+ - [ ] Create user evilgophish  
 ## Errors
 The following error might occur while installing:
 ```bash
