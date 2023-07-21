@@ -76,6 +76,6 @@ else
     echo -e "\033[33m[?] Check if service is running: sudo systemctl status gophish\033[0m"
     echo -e "\033[33m[?] If service does not run, troubleshoot the /etc/systemd/system/gophish.service file\033[0m"
     password=$(grep --color=always --word-regexp 'Please login with the username admin and the password' /var/log/gophish/gophish.log | cut -d' ' -f12- | tr -d '"')
-    echo "[*] Username is admin, password is" $password
+    echo "[*] Username is admin, password is $password"
     echo "[*] Visit https://localhost:3333 to login"
 fi
