@@ -11,28 +11,10 @@ cd buildphish
 chmod +x *.sh
 ```
 Now you can run the script to build Gophish as a Service:
-```bash
-sudo ./buildphish.sh
- 
-    ____        _ __    ______  __    _      __  
-   / __ )__  __(_) /___/ / __ \/ /_  (_)____/ /_ 
-  / __  / / / / / / __  / /_/ / __ \/ / ___/ __ \
- / /_/ / /_/ / / / /_/ / ____/ / / / (__  ) / / /
-/_____/\__,_/_/_/\__,_/_/   /_/ /_/_/____/_/ /_/
-Made by bl13pbl03p                          v.0.1
 
-[+] Let's build!
-[+] Stoppped apache2
-[+] Downloading Gophish
-[+] Unzipping..
-[+] Installed gophish
-[+] Gophish is setup as service
-[?] Check if service is running: sudo systemctl status gophish
-[?] If service does not run, troubleshoot the /etc/systemd/system/gophish.service file
-[*] Username is admin, view initial password with:
-cat /var/log/gophish/gophish.log | grep 'Please login with the username admin and the password'
-[*] Visit https://localhost:3333 to login
-```
+<img src="https://github.com/bl13pbl03p/buildphish/assets/22095577/63778ee4-a1c6-4cbb-af2e-9e17effc4164" width=600px height=450px>
+
+
 ## Uninstall
 You can run the cleanphish script to clean Gophish as service:
 ```bash
