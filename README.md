@@ -1,6 +1,8 @@
 # BuildPhish
 Simple bash script which downloads, installs and sets up GaaS: Gophish as a Service. Current version (Gophish Linux 64-bit v0.12.1) has been tested on Debian and Ubuntu. If Gophish has been configured successfully as a service, it will also start on boot.
 
+Thanks [@jordan-wright](https://github.com/jordan-wright) and all other contributors for creating Gophish, the tool has been really helpful along the way :)
+
 ## Install & Run
 First download the repo with git, navigate into directory and make the bash files executable.
 
