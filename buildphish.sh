@@ -2,7 +2,8 @@
 
 FILE=/etc/systemd/system/gophish.service
 # Set the expected checksum of the ZIP file
-expected_checksum="44f598c1eeb72c3b08fa73d57049022d96cea2872283b87a73d21af78a2c6d47"
+# expected_checksum="44f598c1eeb72c3b08fa73d57049022d96cea2872283b87a73d21af78a2c6d47" for original gophish repo
+expected_checksum="bf9c7fc9c82d7ab0d6daf5f64bbea9943c074471eeb12b154e8c1e788a92d042" # for Kubagretzky gophish repo
 
 if [ -f "$FILE" ]; 
     then
@@ -40,7 +41,8 @@ else
     echo -e "\033[32m[+] Downloading Gophish v0.12.1\033[0m"
 
     # Download the ZIP file
-    wget -q --show-progress https://github.com/gophish/gophish/releases/download/v0.12.1/gophish-v0.12.1-linux-64bit.zip
+    # wget -q --show-progress https://github.com/gophish/gophish/releases/download/v0.12.1/gophish-v0.12.1-linux-64bit.zip
+    wget -q --show-progress https://github.com/kgretzky/gophish/releases/download/v0.12.1/gophish-v0.12.1-linux-64bit.zip
 
     # Get the actual checksum of the ZIP file
     actual_checksum=$(sha256sum gophish-v0.12.1-linux-64bit.zip | cut -d' ' -f1)
@@ -76,6 +78,8 @@ else
     echo -e "\033[33m[?] Check if service is running: sudo systemctl status gophish\033[0m"
     echo -e "\033[33m[?] If service does not run, troubleshoot the /etc/systemd/system/gophish.service file\033[0m"
     password=$(grep --color=always --word-regexp 'Please login with the username admin and the password' /var/log/gophish/gophish.log | cut -d' ' -f12- | tr -d '"')
+    echo "[*] Searching your password..."
+    sleep 5
     echo "[*] Username is admin, password is $password"
     echo "[*] Visit https://localhost:3333 to login"
 fi
