@@ -89,7 +89,7 @@ else
     # Check log files to print credentials
     LOG_FILE="/var/log/gophish/gophish.log"
     SEARCH_STRING="Please login with the username admin and the password"
-    MAX_WAIT_TIME=15  # Maximum time to wait in seconds
+    MAX_WAIT_TIME=20  # Maximum time to wait in seconds
     INTERVAL=1  # How often to check (in seconds)
 
     echo "[*] Checking for password in the log file for up to $MAX_WAIT_TIME seconds..."
@@ -108,7 +108,8 @@ else
         ELAPSED_TIME=$((CURRENT_TIME - START_TIME))
 
         if [[ $ELAPSED_TIME -ge $MAX_WAIT_TIME ]]; then
-            echo -e "\031[31m[!] Timeout reached, no password found. \031[0m"
+            echo -e "\031[31m[!] Timeout reached, no password found. \033[0m"
+            echo -e "\033[33m[?] Check manually with: grep --word-regexp "$SEARCH_STRING" "$LOG_FILE" | cut -d' ' -f12- | tr -d '"'\033[0m"
             break
         fi
 
