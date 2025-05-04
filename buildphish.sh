@@ -109,7 +109,7 @@ else
 
         if [[ $ELAPSED_TIME -ge $MAX_WAIT_TIME ]]; then
             echo -e "\031[31m[!] Timeout reached, no password found. \033[0m"
-            echo -e "\033[33m[?] Check manually with: grep --word-regexp "$SEARCH_STRING" "$LOG_FILE" | cut -d' ' -f12- | tr -d '"'\033[0m"
+            echo -e "\033[33m[?] Check manually with: grep --word-regexp '$SEARCH_STRING' '$LOG_FILE' | cut -d' ' -f12- | tr -d '"'\033[0m"
             break
         fi
 
