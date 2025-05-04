@@ -56,3 +56,6 @@ grep --color=always --word-regexp 'Please login with the username admin and the 
 - [Official Gophish Docs](https://getgophish.com/documentation/)
 - [Creating banner](https://manytools.org/hacker-tools/ascii-banner/)
 - [Evilginx 3.3 - Go & Phish](https://breakdev.org/evilginx-3-3-go-phish/)
+
+## License
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
