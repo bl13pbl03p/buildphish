@@ -46,7 +46,7 @@ else
         echo "[*] No Apache server detected."
     fi
     echo -e "\033[32mPrevented apache2 from starting on boot\033[0m"
-    echo -e "\033[32m[+] Downloading Gophish (Evilginx compatible version) v0.12.1\033[0m"
+    echo -e "\033[32m[+] Downloading Gophish \e[1m(Evilginx compatible version)\e[0m v0.12.1\033[0m"
 
     # Download the ZIP file
     # wget -q --show-progress https://github.com/gophish/gophish/releases/download/v0.12.1/gophish-v0.12.1-linux-64bit.zip
@@ -108,8 +108,8 @@ else
         ELAPSED_TIME=$((CURRENT_TIME - START_TIME))
 
         if [[ $ELAPSED_TIME -ge $MAX_WAIT_TIME ]]; then
-            echo -e "\031[31m[!] Timeout reached, no password found. \033[0m"
-            echo -e "\033[33m[?] Retrieve password with command in README under 'Known issues'"
+            echo -e "\e[31m[!] Timeout reached, no password found.\e[0m"
+            echo -e "\033[33m[?] Retrieve password with command in README under \e[1m'Known issues'\e[0m"
             break
         fi
 
