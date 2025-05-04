@@ -115,5 +115,8 @@ else
 
         sleep $INTERVAL
     done
+
+    # Function to log in, change initial password via bash prompt and echo fresh API key via GET to https://localhost:3333/api/reset 
+    
     echo "[*] Visit https://localhost:3333 to login!"
 fi
