@@ -14,7 +14,7 @@ if [ -f "$FILE" ];
           / __  / / / / / / __  / /_/ / __ \/ / ___/ __ \
          / /_/ / /_/ / / / /_/ / ____/ / / / (__  ) / / /
         /_____/\__,_/_/_/\__,_/_/   /_/ /_/_/____/_/ /_/
-        Made by bl13pbl03p                          v.0.1
+        Made by bl13pbl03p                          v.1.0
         '
         echo -e "\033[0m"
         echo -e "\033[31m[-] Gophish is already configured as a service\033[0m"
@@ -27,7 +27,7 @@ else
       / __  / / / / / / __  / /_/ / __ \/ / ___/ __ \
      / /_/ / /_/ / / / /_/ / ____/ / / / (__  ) / / /
     /_____/\__,_/_/_/\__,_/_/   /_/ /_/_/____/_/ /_/
-    Made by bl13pbl03p                          v.0.1
+    Made by bl13pbl03p                          v.1.0
     '
     echo -e "\033[0m"
 
@@ -36,9 +36,17 @@ else
     echo -e "\033[32m[+] Updating apt and installing packages\033[0m"
     sudo apt update -y > /dev/null 2>&1
     sudo apt install pv wget unzip -y > /dev/null 2>&1
-    sudo service apache2 stop && sudo systemctl disable apache2 && sudo systemctl mask apache2 > /dev/null 2>&1 
+
+    # Check if apache is running
+    if systemctl is-active --quiet apache2; then
+        echo "[*] Apache server detected, stopping and disabling..."
+        sudo service apache2 stop && sudo systemctl disable apache2 && sudo systemctl mask apache2 > /dev/null 2>&1
+        echo -e "\033[32m[+]Apache service stopped, disabled, and masked.\033[0m"
+    else
+        echo "[*] No Apache server detected."
+    fi
     echo -e "\033[32mPrevented apache2 from starting on boot\033[0m"
-    echo -e "\033[32m[+] Downloading Gophish v0.12.1\033[0m"
+    echo -e "\033[32m[+] Downloading Gophish (Evilginx compatible version) v0.12.1\033[0m"
 
     # Download the ZIP file
     # wget -q --show-progress https://github.com/gophish/gophish/releases/download/v0.12.1/gophish-v0.12.1-linux-64bit.zip
@@ -77,9 +85,34 @@ else
     echo -e "\033[32m[+] Gophish is setup as service\033[0m"
     echo -e "\033[33m[?] Check if service is running: sudo systemctl status gophish\033[0m"
     echo -e "\033[33m[?] If service does not run, troubleshoot the /etc/systemd/system/gophish.service file\033[0m"
-    echo "[*] Searching for your password, go get some water in the meantime"
-    sleep 10
-    password=$(grep --color=always --word-regexp 'Please login with the username admin and the password' /var/log/gophish/gophish.log | cut -d' ' -f12- | tr -d '"')
-    echo "[*] Username is admin, password is $password"
+    
+    # Check log files to print credentials
+    LOG_FILE="/var/log/gophish/gophish.log"
+    SEARCH_STRING="Please login with the username admin and the password"
+    MAX_WAIT_TIME=15  # Maximum time to wait in seconds
+    INTERVAL=1  # How often to check (in seconds)
+
+    echo "[*] Checking for password in the log file for up to $MAX_WAIT_TIME seconds..."
+
+    START_TIME=$(date +%s)
+
+    while true; do
+        password=$(grep --word-regexp "$SEARCH_STRING" "$LOG_FILE" | cut -d' ' -f12- | tr -d '"')
+
+        if [[ -n "$password" ]]; then
+            echo -e "\033[32m[+] Username is admin, password is $password \033[0m"
+            break
+        fi
+
+        CURRENT_TIME=$(date +%s)
+        ELAPSED_TIME=$((CURRENT_TIME - START_TIME))
+
+        if [[ $ELAPSED_TIME -ge $MAX_WAIT_TIME ]]; then
+            echo -e "\031[31m[!] Timeout reached, no password found. \031[0m"
+            break
+        fi
+
+        sleep $INTERVAL
+    done
     echo "[*] Visit https://localhost:3333 to login!"
 fi
