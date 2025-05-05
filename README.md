@@ -1,5 +1,5 @@
 # BuildPhish
-Simple bash script which downloads, installs and sets up GaaS: Gophish as a Service. Current version (Gophish Linux 64-bit v0.12.1, Evilginx compatible) has been tested on Debian. If Gophish has been configured successfully as a service, it will also start on boot.
+Simple bash script which downloads, installs and sets up GaaS: Gophish as a Service. Current version (Gophish Linux 64-bit v0.12.1, **Evilginx compatible**) has been tested on Debian. If Gophish has been configured successfully as a service, it will also start on boot.
 
 Thanks [@jordan-wright](https://github.com/jordan-wright) for creating Gophish, [@kgretzky](https://github.com/kgretzky) for creating Evilginx and the rest of the contributors, your tools have been really helpful along the way :)
 
@@ -12,11 +12,10 @@ Thanks [@jordan-wright](https://github.com/jordan-wright) for creating Gophish, 
 ## Install & Run
 First download the repo with git, navigate into directory, make the bash files executable and run them!
 
-Open your terminal and enter the following commands:
+Open your terminal, enter the following bash one-liner to download and install Gophish:
 ```bash
 git clone https://github.com/bl13pbl03p/buildphish.git && cd buildphish && chmod +x *.sh && sudo ./buildphish.sh
 ```
-Now you can run the script to build Gophish as a Service:
 
 [![asciicast](https://asciinema.org/a/eoCJo7V1TJcygDh4w8DXHfjn2.svg)](https://asciinema.org/a/eoCJo7V1TJcygDh4w8DXHfjn2)
 
