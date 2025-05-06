@@ -4,7 +4,7 @@ Simple bash script which downloads, installs and sets up GaaS: Gophish as a Serv
 Thanks [@jordan-wright](https://github.com/jordan-wright) for creating Gophish, [@kgretzky](https://github.com/kgretzky) for creating Evilginx and the rest of the contributors, your tools have been really helpful along the way :)
 
 ## Requirements
-- You need to have access to remote/local server running Debian OS or similar with following requirements:
+You need to have access to remote/local server running Debian OS or similar with following requirements:
 - At least 1GB RAM and at least 1 CPU.
 - Non-root user in sudoers group with preconfigured authorized_keys SSH keys to allow for passwordless login.
 - Check out https://help.evilginx.com/community/getting-started/deployment/remote#requirements
