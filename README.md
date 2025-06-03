@@ -46,6 +46,10 @@ Failed to enable unit: File /etc/systemd/system/gophish.service already exists.
 ```bash
 grep --color=always --word-regexp 'Please login with the username admin and the password' /var/log/gophish/gophish.log | cut -d' ' -f12- | tr -d '"'
 ```
+In case you forgot the password for your admin account, the following commands reset the password to `gophish`:
+```bash
+sudo apt update && sudo apt-get install -y sqlite3 libsqlite3-dev && sudo sqlite3 /opt/gophish/gophish.db 'update users set hash="$2a$10$IYkPp0.QsM81lYYPrQx6W.U6oQGw7wMpozrKhKAHUBVL4mkm/EvAS" where username="admin";'
+```
 
 ## Resources
 - [Latest Gophish Release](https://github.com/gophish/gophish/releases/tag/v0.12.1)
@@ -53,6 +57,7 @@ grep --color=always --word-regexp 'Please login with the username admin and the 
 - [Official Gophish Docs](https://getgophish.com/documentation/)
 - [Creating banner](https://manytools.org/hacker-tools/ascii-banner/)
 - [Evilginx 3.3 - Go & Phish](https://breakdev.org/evilginx-3-3-go-phish/)
+- [Reset Gophish password](https://github.com/gophish/gophish/issues/362#issuecomment-337859010)
 
 ## License
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
