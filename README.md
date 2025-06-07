@@ -46,7 +46,7 @@ Failed to enable unit: File /etc/systemd/system/gophish.service already exists.
 ```bash
 grep --color=always --word-regexp 'Please login with the username admin and the password' /var/log/gophish/gophish.log | cut -d' ' -f12- | tr -d '"'
 ```
-In case you forgot the password for your admin account, the following commands reset the password to `gophish`:
+In case you forgot the password for your admin account, the following one-liner resets the password to `gophish`:
 ```bash
 sudo apt update && sudo apt-get install -y sqlite3 libsqlite3-dev && sudo sqlite3 /opt/gophish/gophish.db 'update users set hash="$2a$10$IYkPp0.QsM81lYYPrQx6W.U6oQGw7wMpozrKhKAHUBVL4mkm/EvAS" where username="admin";'
 ```
