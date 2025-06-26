@@ -7,7 +7,11 @@ Thanks [@jordan-wright](https://github.com/jordan-wright) for creating Gophish, 
 You need to have access to remote/local server running Debian OS or similar with following requirements:
 - At least 1GB RAM and at least 1 CPU.
 - Non-root user in sudoers group with preconfigured authorized_keys SSH keys to allow for passwordless login.
-- Check out https://help.evilginx.com/community/getting-started/deployment/remote#requirements
+- Also check out:
+  - https://help.evilginx.com/community/getting-started/deployment/remote#requirements
+  - https://help.evilginx.com/pro/quickstart#server
+  - https://github.com/gophish/gophish/issues/2607
+  - https://github.com/gophish/gophish/issues/1144#issuecomment-407955790
 
 ## Install & Run
 First download the repo with git, navigate into directory, make the bash files executable and run them!
