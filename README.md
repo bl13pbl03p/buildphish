@@ -17,7 +17,8 @@ Open your terminal, enter the following bash one-liner to download and install G
 git clone https://github.com/bl13pbl03p/buildphish.git && cd buildphish && chmod +x *.sh && sudo ./buildphish.sh
 ```
 <a href="https://asciinema.org/a/eoCJo7V1TJcygDh4w8DXHfjn2" target="_blank"><img src="https://asciinema.org/a/eoCJo7V1TJcygDh4w8DXHfjn2.svg" /></a>
-
+## Install the original Gophish platform
+Comment and uncomment the correct lines in `buildphish.sh` to install the original Gophish version.
 ## Uninstall
 You can run the cleanphish script to clean Gophish as service:
 ```bash
