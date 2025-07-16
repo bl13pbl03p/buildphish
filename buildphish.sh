@@ -3,7 +3,7 @@
 FILE=/etc/systemd/system/gophish.service
 # Set the expected checksum of the ZIP file
 # expected_checksum="44f598c1eeb72c3b08fa73d57049022d96cea2872283b87a73d21af78a2c6d47" for original gophish repo
-expected_checksum="bf9c7fc9c82d7ab0d6daf5f64bbea9943c074471eeb12b154e8c1e788a92d042" # for Kubagretzky gophish repo
+expected_checksum="1b5354b67a3ae7cd5659de517fdf7b5b8e52a24ed73de5ba26e5ec2885f2b921" # for Kubagretzky gophish repo
 
 if [ -f "$FILE" ]; 
     then
@@ -50,10 +50,10 @@ else
 
     # Download the ZIP file
     # wget -q --show-progress https://github.com/gophish/gophish/releases/download/v0.12.1/gophish-v0.12.1-linux-64bit.zip
-    wget -q --show-progress https://github.com/kgretzky/gophish/releases/download/v0.12.1/gophish-v0.12.1-linux-64bit.zip
+    wget -q --show-progress https://github.com/kgretzky/gophish/releases/download/v0.12.2/gophish-v0.12.2-linux-64bit.zip
 
     # Get the actual checksum of the ZIP file
-    actual_checksum=$(sha256sum gophish-v0.12.1-linux-64bit.zip | cut -d' ' -f1)
+    actual_checksum=$(sha256sum gophish-v0.12.2-linux-64bit.zip | cut -d' ' -f1)
 
     # Compare the expected checksum to the actual checksum
     if [ "$expected_checksum" = "$actual_checksum" ]; then
