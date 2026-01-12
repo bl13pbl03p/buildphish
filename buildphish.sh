@@ -46,7 +46,7 @@ else
         echo "[*] No Apache server detected."
     fi
     echo -e "\033[32mPrevented apache2 from starting on boot\033[0m"
-    echo -e "\033[32m[+] Downloading Gophish \e[1m(Evilginx compatible version)\e[0m v0.12.1\033[0m"
+    echo -e "\033[32m[+] Downloading Gophish \e[1m(Evilginx compatible version)\e[0m v0.12.2\033[0m"
 
     # Download the ZIP file
     # wget -q --show-progress https://github.com/gophish/gophish/releases/download/v0.12.1/gophish-v0.12.1-linux-64bit.zip
