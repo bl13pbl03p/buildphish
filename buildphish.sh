@@ -75,7 +75,7 @@ else
     # Setting up as service
     echo -e "\033[32m[+] Setting up Gophish as a service\033[0m"
     sudo useradd -r gophish
-    sudo cp -r gophish.service /etc/systemd/system/
+    sudo cp /opt/buildphish/gophish.service /etc/systemd/system/
     sudo mkdir /var/log/gophish
     sudo chown -R gophish:gophish /opt/gophish/ /var/log/gophish/
     sudo /sbin/setcap cap_net_bind_service=+ep /opt/gophish/gophish
