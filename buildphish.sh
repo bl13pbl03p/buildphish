@@ -50,7 +50,7 @@ else
 
     # Download the ZIP file
     # wget -q --show-progress https://github.com/gophish/gophish/releases/download/v0.12.1/gophish-v0.12.1-linux-64bit.zip
-    wget -q --show-progress https://github.com/kgretzky/gophish/releases/download/v0.12.2/gophish-v0.12.2-linux-64bit.zip
+    wget -q --show-progress https://github.com/kgretzky/gophish/releases/download/v0.12.2/gophish-v0.12.2-linux-64bit.zip -P /opt/buildphish
 
     # Get the actual checksum of the ZIP file
     actual_checksum=$(sha256sum gophish-v0.12.2-linux-64bit.zip | cut -d' ' -f1)
@@ -66,7 +66,7 @@ else
     echo -e "\033[32m[+] Unzipping..\033[0m"
 
     # Unzip the file and show the progress bar using pv
-    sudo unzip -o gophish-v0.12.2-linux-64bit.zip -d /opt/gophish | pv -l >/dev/null
+    sudo unzip -o /opt/buildphish/gophish-v0.12.2-linux-64bit.zip -d /opt/gophish | pv -l >/dev/null
 
     echo -e "\033[32m[+] Unzip complete!\033[0m"
     sudo chmod +x /opt/gophish/gophish
