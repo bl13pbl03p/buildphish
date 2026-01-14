@@ -53,7 +53,7 @@ else
     wget -q --show-progress https://github.com/kgretzky/gophish/releases/download/v0.12.2/gophish-v0.12.2-linux-64bit.zip -P /opt/buildphish
 
     # Get the actual checksum of the ZIP file
-    actual_checksum=$(sha256sum gophish-v0.12.2-linux-64bit.zip | cut -d' ' -f1)
+    actual_checksum=$(sha256sum /opt/buildphish/gophish-v0.12.2-linux-64bit.zip | cut -d' ' -f1)
 
     # Compare the expected checksum to the actual checksum
     if [ "$expected_checksum" = "$actual_checksum" ]; then
